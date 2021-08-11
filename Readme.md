@@ -10,11 +10,31 @@ Rest API to find a food truck using location id and find food trucks in a block 
 
 Java. Oracle version or AdoptOpenJDK version 11 or more.
 
-### Building the project
+### Building the project and install locally
 
+1. Clone the repo
+```
+git clone https://github.com/samarenb/takehomeengineeringchallenge.git
+```
+2. Build the project using maven wrapper
+``` 
+On windows mvnw.cmd clean install
+On linux or mac ./mvnw clean install
+```
+3. Target directory will be created inside the project root, cd into it 
+```
+Run the command java -jar takehomeengineeringchlng-0.0.1-SNAPSHOT.jar
+```
+4. The project uses the foodtruck csv file located in src/main/resources/data directory, in ordet to use a different file
+```
+Copy the file and put it in src/main/resources/data folder and call it Mobile_Food_Facility_Permit.csc
+```
+5. In order to create the docker image, use the command
+```
+docker build -t <image name> .
+```
 
-
-### Installation Docker Image 
+### Installation of existing Docker Image from docker hub
 
 1. Install docker client on your machine
 2. Pull the docker image:
