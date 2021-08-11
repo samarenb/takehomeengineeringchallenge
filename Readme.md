@@ -4,6 +4,16 @@
 
 Rest API to find a food truck using location id and find food trucks in a block using block id, you can add food truck using post operation. For this release the food truck csv file is part of the resources folder.
 
+
+
+### Requirements
+
+Java. Oracle version or AdoptOpenJDK version 11 or more.
+
+### Building the project
+
+
+
 ### Installation Docker Image 
 
 1. Install docker client on your machine
