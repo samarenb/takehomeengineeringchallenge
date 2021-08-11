@@ -18,12 +18,14 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 ### Installation Docker Image 
 
 1. Install docker client on your machine
-2. Pull the docker image
-   ```docker pull samarenb/takehomechlng
-   ```
-3. Run the image
-   ```docker run -p 8080:8080 -p 9091:9091 samarenb/takehomechlng
-   ```
+2. Pull the docker image:
+
+   docker pull samarenb/takehomechlng
+   
+3. Run the image:
+
+   docker run -p 8080:8080 -p 9091:9091 samarenb/takehomechlng
+   
 4. Use shell commands like curl or browser plugin to interact with the service
    
 
