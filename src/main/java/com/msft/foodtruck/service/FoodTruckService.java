@@ -2,6 +2,7 @@ package com.msft.foodtruck.service;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -69,7 +70,7 @@ public class FoodTruckService implements FoodTruckServiceAPI {
 		// Get the CSVReader instance with try with resources so autoclose happens, no
 		// need of explicit close
 
-		try (CSVReader reader = new CSVReader(new FileReader(new ClassPathResource(foodtruckFilePath).getFile()))) {
+		try (CSVReader reader = new CSVReader(new InputStreamReader(new ClassPathResource(foodtruckFilePath).getInputStream()))) {
 			String[] nextLine;
 			// Move the reader once so that the header lines are ignored
 			reader.readNext();
