@@ -116,18 +116,15 @@ Request body:
 
 
 
-
-
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Java](https://java.com)
 * [SpringBoot](https://spring.io)
-* [Maven]  
+* [Maven] (https://maven.apache.org) 
 
 
-
-###Observability Endpoints
+### Observability Endpoints
 
 * http://localhost:9091/actuator/health
 * http://localhost:9091/actuator/info
