@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.validation.Valid;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,8 +30,10 @@ import com.msft.foodtruck.model.FoodTruck;
 import com.msft.foodtruck.service.FoodTruckServiceAPI;
 
 import lombok.extern.slf4j.Slf4j;
+
 /**
  * Controller for the rest service which contains all the endpoints required.
+ * 
  * @author bajsamar
  *
  */
@@ -42,12 +46,11 @@ public class FoodTruckController {
 	FoodTruckServiceAPI foodTruckService;
 
 	@GetMapping("{locationid}")
-	public FoodTruck getFoodTruckByLocationId(@PathVariable int locationid) {
+	public FoodTruck getFoodTruckByLocationId(@PathVariable @Min(1) int locationid) {
 		log.info("Get request recieved for locationId {}", locationid);
 		FoodTruck foodTruck = foodTruckService.getFoodTruckById(locationid);
 		if (foodTruck != null) {
 			log.info("Get request processed successfully for locationid {}", locationid);
-
 			return foodTruck;
 		}
 		throw new ResponseStatusException(HttpStatus.NOT_FOUND,
@@ -55,7 +58,7 @@ public class FoodTruckController {
 	}
 
 	@GetMapping
-	public Set<FoodTruck> getFoodTruckByBlock(@RequestParam(value = "block") String block) {
+	public Set<FoodTruck> getFoodTruckByBlock(@RequestParam(value = "block") @Size(max = 10) String block) {
 		log.info("Get request recieved for block {}", block);
 		Set<FoodTruck> foodTrucks = foodTruckService.getFoodTruckByBlock(block);
 		if (foodTrucks != null && foodTrucks.size() > 0) {
@@ -67,6 +70,13 @@ public class FoodTruckController {
 
 	}
 
+	/**
+	 * Post method for creating new food trucks
+	 * 
+	 * @param newFoodTruck
+	 * @return
+	 * @throws ServerException
+	 */
 	@PostMapping
 	public ResponseEntity<FoodTruck> create(@Valid @RequestBody FoodTruck newFoodTruck) throws ServerException {
 		log.info("Post request recieved for locationId {}", newFoodTruck.getLocationid());
@@ -86,9 +96,9 @@ public class FoodTruckController {
 		Map<String, String> errors = new HashMap<>();
 		ex.getBindingResult().getAllErrors().forEach((error) -> {
 			String fieldName = ((FieldError) error).getField();
-			log.debug("fieldName {}", fieldName);
+			log.error("fieldName {}", fieldName);
 			String errorMessage = error.getDefaultMessage();
-			log.debug("errorMessage {}", errorMessage);
+			log.error("errorMessage {}", errorMessage);
 			errors.put(fieldName, errorMessage);
 		});
 		return errors;
