@@ -1,6 +1,5 @@
 package com.msft.foodtruck.service;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashSet;
@@ -21,8 +20,8 @@ import com.opencsv.exceptions.CsvValidationException;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Service class that loads and stores the foodtruck data in memory in two data
- * structures.
+ * Service class that loads and stores the foodtruck data in memory in using
+ * HashMap data structure.
  * 
  * @author bajsamar
  *
@@ -32,7 +31,8 @@ import lombok.extern.slf4j.Slf4j;
 public class FoodTruckService implements FoodTruckServiceAPI {
 	// ConcurrentHash map allows concurrent access to the map. Part of the map
 	// called Segment (internal data structure) is only getting locked while adding
-	// or updating the map
+	// or updating the map, map has been preferred for lookups as it provides O(1)
+	// time complexity.
 	private final Map<Integer, FoodTruck> foodTruckMap = new ConcurrentHashMap<>();
 	private final Map<String, Set<FoodTruck>> blockFoodTruckMap = new ConcurrentHashMap<>();
 	@Value("${foodtruck.filepath}")
@@ -64,13 +64,17 @@ public class FoodTruckService implements FoodTruckServiceAPI {
 		return foodTrucks;
 	}
 
+	/**
+	 * This method will be invoked on start up to load the CSV data in memory.
+	 */
 	@PostConstruct
 	public void parseFileLoadFoodTruckInADT() {
 		log.info("Loading food truck csv data ...");
 		// Get the CSVReader instance with try with resources so autoclose happens, no
 		// need of explicit close
 
-		try (CSVReader reader = new CSVReader(new InputStreamReader(new ClassPathResource(foodtruckFilePath).getInputStream()))) {
+		try (CSVReader reader = new CSVReader(
+				new InputStreamReader(new ClassPathResource(foodtruckFilePath).getInputStream()))) {
 			String[] nextLine;
 			// Move the reader once so that the header lines are ignored
 			reader.readNext();

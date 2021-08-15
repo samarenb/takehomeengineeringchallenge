@@ -32,7 +32,8 @@ import com.msft.foodtruck.service.FoodTruckServiceAPI;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Controller for the rest service which contains all the endpoints required.
+ * Controller for the rest service which contains GET locationId, GET block
+ * and POST endpoints.
  * 
  * @author bajsamar
  *

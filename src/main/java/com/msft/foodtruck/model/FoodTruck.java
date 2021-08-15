@@ -5,7 +5,11 @@ import javax.validation.constraints.Min;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
+/**
+ * FoodTruck POJO class representing the FoodTruck which is marshalled/unmarshalled by Jackson serializer.
+ * @author bajsamar
+ *
+ */
 @JsonInclude(value = Include.NON_NULL)
 public class FoodTruck {
 	@Min(1) // Location id cannot be less than 1
