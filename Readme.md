@@ -30,7 +30,7 @@ Run the command java -jar target/takehomeengineeringchlng-0.0.1-SNAPSHOT.jar
 ```
 4. (Optional) The project uses the Mobile_Food_Facility_Permit csv file located in src/main/resources/data directory by default, in ordet to use a different file
 ```
-Copy the file and put it in src/main/resources/data folder and call it Mobile_Food_Facility_Permit.csc rebuild the project using the above steps.
+Delete/Rename existing file in  src/main/resources/data folder and copy the new file into src/main/resources/data folder and call it Mobile_Food_Facility_Permit.csc rebuild the project using step 2 and run it using step 3.(Note-: The file should be of the same CSV format as the existing file)
 ```
 5. (Optional) In order to create the docker image, use the command
 ```
