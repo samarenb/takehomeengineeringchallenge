@@ -63,7 +63,7 @@ docker build -t <image name> .
 
 ### GET /foodTrucks/{locationid}
 
-Example: http://localhost:8080/foodTrucks/1514023
+Example: http://localhost:8080/foodtrucks/1514023
 
 Response body:
 
