@@ -14,15 +14,16 @@ Java. Oracle version or AdoptOpenJDK version 11 or more.
 1. Clone the repo
 ```
 git clone https://github.com/samarenb/takehomeengineeringchallenge.git
+cd takehomeengineeringchallenge 
 ```
 2. Build the project using maven wrapper
 ``` 
 On windows mvnw.cmd clean install
 On linux or mac ./mvnw clean install
 ```
-3. Target directory will be created inside the project root, cd into it 
+3. Target directory will be created inside the project root after a successful build 
 ```
-Run the command java -jar takehomeengineeringchlng-0.0.1-SNAPSHOT.jar
+Run the command java -jar target/takehomeengineeringchlng-0.0.1-SNAPSHOT.jar
 ```
 4. The project uses the Mobile_Food_Facility_Permit csv file located in src/main/resources/data directory, in ordet to use a different file
 ```
