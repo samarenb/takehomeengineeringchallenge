@@ -38,7 +38,7 @@ Delete/Rename existing file in  src/main/resources/data folder and copy the new 
 docker build -t <image name> .
 ```
 
-### Installation of existing Docker Image from docker hub
+### Installation of existing Docker Image from docker hub(Optional)
 
 1. Install docker client on your machine
 2. Pull the docker image:
