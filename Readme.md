@@ -21,15 +21,15 @@ cd takehomeengineeringchallenge
 On windows mvnw.cmd clean install
 On linux or mac ./mvnw clean install
 ```
-3. Target directory will be created inside the project root after a successful build 
+3. Target directory will be created inside the project root after a successful build. Rest API is ready and listening at port 8080 for GET/POST requests, port 9091 should be listening for observability requests.
 ```
 Run the command java -jar target/takehomeengineeringchlng-0.0.1-SNAPSHOT.jar
 ```
-4. The project uses the Mobile_Food_Facility_Permit csv file located in src/main/resources/data directory, in ordet to use a different file
+4. (Optional) The project uses the Mobile_Food_Facility_Permit csv file located in src/main/resources/data directory by default, in ordet to use a different file
 ```
-Copy the file and put it in src/main/resources/data folder and call it Mobile_Food_Facility_Permit.csc rebuild the project using maven wrapper.
+Copy the file and put it in src/main/resources/data folder and call it Mobile_Food_Facility_Permit.csc rebuild the project using the above steps.
 ```
-5. In order to create the docker image, use the command
+5. (Optional) In order to create the docker image, use the command
 ```
 docker build -t <image name> .
 ```
