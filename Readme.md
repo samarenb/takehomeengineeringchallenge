@@ -21,7 +21,7 @@ cd takehomeengineeringchallenge
 On windows mvnw.cmd clean install
 On linux or mac ./mvnw clean install
 ```
-3. Target directory will be created inside the project root after a successful build. Rest API is ready and listening at port 8080 for GET/POST requests, port 9091 should be listening for observability requests.
+3. Target directory will be created inside the project root after a successful build.  After you run the command below, Rest API will be ready and listening on  port 8080 for GET/POST requests and port 9091 for observability requests.
 ```
 Run the command java -jar target/takehomeengineeringchlng-0.0.1-SNAPSHOT.jar
 ```
