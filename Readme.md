@@ -1,7 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project provides Rest API to find a food truck location using location id and find food trucks in a block using block id, you can add food truck to the existing data store(in memory) using post operation. On start the project loads food truck data from a csv file which is loaded from the classpath and is part of the resources folder(which is in the class path by default).
+This project provides Rest API to find a food truck location using location id and find food trucks in a block using block id, you can add food truck to the existing data store(in memory) using HTTP POST method. On start up the project loads food truck data from a csv file which is loaded from the classpath(src/main/resources) which is in the class path by default.
 
 
 
