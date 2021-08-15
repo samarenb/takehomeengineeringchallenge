@@ -150,9 +150,10 @@ This section should list any major frameworks that you built your project using.
 * [Maven](https://maven.apache.org) 
 
 
-### Observability Endpoints
-
+### Observability
+The application exposes health/info/metrics endopoints for observality, in order to create a dashboard we can utilise the endpoints below
 * http://localhost:9091/actuator/health
 * http://localhost:9091/actuator/info
 * http://localhost:9091/actuator/metrics
 * http://localhost:9091/actuator/metrics/{requiredMetricName}
+Also there are logging statements for debugging and info throughout the code
