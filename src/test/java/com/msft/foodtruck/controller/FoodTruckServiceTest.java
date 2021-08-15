@@ -33,7 +33,7 @@ public class FoodTruckServiceTest {
 	}
 
 	@Test
-	public void getFoodTruckByIdIfExsits_ShouldReturnNullIfNot() {
+	public void getFoodTruckByIdIfDoesnNotExsit_ShouldReturnNull() {
 		assertNull(foodTruckService.getFoodTruckById(111000));
 	}
 
@@ -43,7 +43,7 @@ public class FoodTruckServiceTest {
 	}
 
 	@Test
-	public void getFoodTruckByBlockIfExsits_ShouldReturnNull() {
+	public void getFoodTruckByBlockIfDoesNotExsit_ShouldReturnNull() {
 		assertNull(foodTruckService.getFoodTruckByBlock("xyz"));
 	}
 }
