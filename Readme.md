@@ -52,7 +52,7 @@ docker build -t <image name> .
 4. Use shell commands like curl or browser plugin to interact with the service
 
 ### Testing locally
-1. Install API testing tool such as SOAP UI(https://www.soapui.org/docs/rest-testing/) or Postman(Browser extension)/Curl(Command line) in order to test the API locally (https://svitla.com/blog/testing-rest-api-with-postman-and-curl).
+Install API testing tool such as SOAP UI(https://www.soapui.org/docs/rest-testing/) or Postman(Browser extension)/Curl(Command line) in order to test the API locally (https://svitla.com/blog/testing-rest-api-with-postman-and-curl).
 
 ### API Resources
 
