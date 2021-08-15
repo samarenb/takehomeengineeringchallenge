@@ -7,7 +7,8 @@ This project provides Rest API to find a food truck location using location id a
 
 ### Requirements
 
-Java. Oracle version or AdoptOpenJDK version 11 or more.
+AdoptOpenJDK/Oracle version of Java 11 or more.
+https://docs.oracle.com/en/java/javase/16/install/overview-jdk-installation.html#GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A
 
 ### Building the project and install locally
 
