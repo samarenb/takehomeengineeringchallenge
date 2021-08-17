@@ -1,7 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project provides Rest API to GET a food truck using location id and GET food trucks in a given block using block id, you can add food truck to the existing data store(in memory) using HTTP POST method. On start up the project loads food truck data from a csv file which is loaded from the classpath(src/main/resources/data folder).
+This project provides Rest API to GET a food truck using location id and GET food trucks in a given block using block id, you can add food truck to the existing data store(in memory) using HTTP POST method. On start up the project loads food truck data from a csv file which is loaded from the classpath(src/main/resources/data folder). The project follows MVC pattern, the contrller is the one that recieves and parses the requests and then forwards them to the model to perform the businiess logic, the model returns the result back to the controller and the control creates the response object.
 
 
 
