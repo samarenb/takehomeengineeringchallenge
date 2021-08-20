@@ -152,7 +152,7 @@ This section should list any major frameworks that you built your project using.
 
 
 ### Observability
-The application exposes health/info/metrics endopoints for observality, in order to create a dashboard we can utilise the endpoints below. Also there are logging statements for debugging and info throughout the code.
+The application exposes health/info/metrics endopoints for observality, in order to create a dashboard we can utilize the endpoints below. Also there are logging statements for debugging and info throughout the code.
 
 * http://localhost:9091/actuator/health
 * http://localhost:9091/actuator/info
