@@ -12,6 +12,7 @@ AdoptOpenJDK/Oracle version of Java 11 or more.(https://docs.oracle.com/en/java/
 java -version 
 [should display something like --> openjdk version "15.0.2" 2021-01-19]
 ```
+Set JAVA_HOME env variable, pointing to bin folder of JDK installation.
 
 ### Build the project and install locally
 
