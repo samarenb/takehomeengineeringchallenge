@@ -158,3 +158,7 @@ The application exposes health/info/metrics endopoints for observality, in order
 * http://localhost:9091/actuator/metrics
 * http://localhost:9091/actuator/metrics/{requiredMetricName}
 
+
+### To Do
+* Add Pagination to the API responses
+* Add Search functionality, given a location ID
